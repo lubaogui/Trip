@@ -203,9 +203,9 @@
 		24842D221CB94D4300FA784D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				24A80B4B1CBEAD880017266A /* Application.swift */,
 				24A80B4F1CBEAD990017266A /* UserIdentity.swift */,
 				24A80B4D1CBEAD900017266A /* BaseHttpRequest.swift */,
-				24A80B4B1CBEAD880017266A /* Application.swift */,
 				247758041CBC72F400251EC7 /* LBTabBarController.swift */,
 			);
 			name = Base;
