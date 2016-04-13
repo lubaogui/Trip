@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DropdownMenu.(updateLayout in _46AA24E8588600308BCBFEF345D225AA)(CGRect) -&gt; ():DropdownMenu.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "originnalFrame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DropdownMenu.init(frame : CGRect) -&gt; DropdownMenu:DropdownMenu.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DropdownMenu.(updateUI in _46AA24E8588600308BCBFEF345D225AA)() -&gt; ():DropdownMenu.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
