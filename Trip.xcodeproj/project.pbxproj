@@ -13,10 +13,6 @@
 		247BB46D1CB26F0A002E436A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB46C1CB26F0A002E436A /* LoginView.swift */; };
 		247BB4701CB2B0F9002E436A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BB46F1CB2B0F9002E436A /* UIViewExtension.swift */; };
 		248027F81CB8E5E300354AD6 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248027F71CB8E5E300354AD6 /* GuideViewController.swift */; };
-		24842D271CB94E0A00FA784D /* UserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24842D251CB94E0A00FA784D /* UserIdentity.swift */; };
-		24842D281CB94E0A00FA784D /* BaseHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24842D261CB94E0A00FA784D /* BaseHttpRequest.swift */; };
-		24842D2A1CB94E1D00FA784D /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24842D291CB94E1D00FA784D /* Application.swift */; };
-		24842D2C1CB94E6700FA784D /* LBToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24842D2B1CB94E6700FA784D /* LBToast.swift */; };
 		2484A62C1CBB519300CD51F8 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484A62B1CBB519300CD51F8 /* MeViewController.swift */; };
 		2484A6301CBB6C9600CD51F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484A62F1CBB6C9600CD51F8 /* User.swift */; };
 		2484A6321CBB788000CD51F8 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2484A6311CBB788000CD51F8 /* SignupViewController.swift */; };
@@ -31,6 +27,10 @@
 		2486EB7E1C98025F00EA22B6 /* TripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486EB7D1C98025F00EA22B6 /* TripTests.swift */; };
 		2486EB891C98025F00EA22B6 /* TripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2486EB881C98025F00EA22B6 /* TripUITests.swift */; };
 		248F1CBC1CB1846F00FC295C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248F1CBA1CB1846F00FC295C /* LoginViewController.swift */; };
+		24A80B4C1CBEAD880017266A /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A80B4B1CBEAD880017266A /* Application.swift */; };
+		24A80B4E1CBEAD900017266A /* BaseHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A80B4D1CBEAD900017266A /* BaseHttpRequest.swift */; };
+		24A80B501CBEAD990017266A /* UserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A80B4F1CBEAD990017266A /* UserIdentity.swift */; };
+		24A80B521CBEADA00017266A /* LBToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A80B511CBEADA00017266A /* LBToast.swift */; };
 		24FB65081CB4F165006C93DA /* DropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB65071CB4F165006C93DA /* DropdownMenu.swift */; };
 		24FB69E51CBCC9960046E97F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24FB69E41CBCC9960046E97F /* Launch Screen.storyboard */; };
 		24FB69E71CBCFFD60046E97F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB69E61CBCFFD60046E97F /* UIColorExtension.swift */; };
@@ -63,10 +63,6 @@
 		247BB46C1CB26F0A002E436A /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		247BB46F1CB2B0F9002E436A /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		248027F71CB8E5E300354AD6 /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
-		24842D251CB94E0A00FA784D /* UserIdentity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserIdentity.swift; path = ../../../../../Documents/Projects/Travel/Travel/UserIdentity.swift; sourceTree = "<group>"; };
-		24842D261CB94E0A00FA784D /* BaseHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseHttpRequest.swift; path = ../../../../../Documents/Projects/Travel/Travel/BaseHttpRequest.swift; sourceTree = "<group>"; };
-		24842D291CB94E1D00FA784D /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Application.swift; path = ../../../../../Documents/Projects/Travel/Travel/Application.swift; sourceTree = "<group>"; };
-		24842D2B1CB94E6700FA784D /* LBToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LBToast.swift; path = ../../../../../Documents/Projects/Travel/Travel/LBToast.swift; sourceTree = "<group>"; };
 		2484A62B1CBB519300CD51F8 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		2484A62F1CBB6C9600CD51F8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2484A6311CBB788000CD51F8 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +83,10 @@
 		2486EB881C98025F00EA22B6 /* TripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripUITests.swift; sourceTree = "<group>"; };
 		2486EB8A1C98025F00EA22B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		248F1CBA1CB1846F00FC295C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		24A80B4B1CBEAD880017266A /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		24A80B4D1CBEAD900017266A /* BaseHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHttpRequest.swift; sourceTree = "<group>"; };
+		24A80B4F1CBEAD990017266A /* UserIdentity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserIdentity.swift; sourceTree = "<group>"; };
+		24A80B511CBEADA00017266A /* LBToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBToast.swift; sourceTree = "<group>"; };
 		24FB65071CB4F165006C93DA /* DropdownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenu.swift; sourceTree = "<group>"; };
 		24FB69E41CBCC9960046E97F /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		24FB69E61CBCFFD60046E97F /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		24105EEE1C9C27F300C0833F /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				24842D2B1CB94E6700FA784D /* LBToast.swift */,
+				24A80B511CBEADA00017266A /* LBToast.swift */,
 				24FB65071CB4F165006C93DA /* DropdownMenu.swift */,
 			);
 			name = Widget;
@@ -203,9 +203,9 @@
 		24842D221CB94D4300FA784D /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				24842D291CB94E1D00FA784D /* Application.swift */,
-				24842D251CB94E0A00FA784D /* UserIdentity.swift */,
-				24842D261CB94E0A00FA784D /* BaseHttpRequest.swift */,
+				24A80B4F1CBEAD990017266A /* UserIdentity.swift */,
+				24A80B4D1CBEAD900017266A /* BaseHttpRequest.swift */,
+				24A80B4B1CBEAD880017266A /* Application.swift */,
 				247758041CBC72F400251EC7 /* LBTabBarController.swift */,
 			);
 			name = Base;
@@ -596,24 +596,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				2484A6301CBB6C9600CD51F8 /* User.swift in Sources */,
-				24842D2A1CB94E1D00FA784D /* Application.swift in Sources */,
 				2484A6341CBB8B5C00CD51F8 /* UIViewControllerExtension.swift in Sources */,
 				245B60B61CBD4EAD00D460F5 /* TripCardView.swift in Sources */,
 				2484A6411CBBDC4900CD51F8 /* DestinationViewController.swift in Sources */,
-				24842D2C1CB94E6700FA784D /* LBToast.swift in Sources */,
+				24A80B521CBEADA00017266A /* LBToast.swift in Sources */,
 				2484A6381CBBD6CF00CD51F8 /* ActivityViewController.swift in Sources */,
-				24842D281CB94E0A00FA784D /* BaseHttpRequest.swift in Sources */,
 				247BB4701CB2B0F9002E436A /* UIViewExtension.swift in Sources */,
+				24A80B501CBEAD990017266A /* UserIdentity.swift in Sources */,
 				24FB69E71CBCFFD60046E97F /* UIColorExtension.swift in Sources */,
 				248F1CBC1CB1846F00FC295C /* LoginViewController.swift in Sources */,
 				2486EB661C98025F00EA22B6 /* AppDelegate.swift in Sources */,
 				2484A62C1CBB519300CD51F8 /* MeViewController.swift in Sources */,
+				24A80B4C1CBEAD880017266A /* Application.swift in Sources */,
 				2484A6321CBB788000CD51F8 /* SignupViewController.swift in Sources */,
 				248027F81CB8E5E300354AD6 /* GuideViewController.swift in Sources */,
 				247BB46D1CB26F0A002E436A /* LoginView.swift in Sources */,
 				2486EB6E1C98025F00EA22B6 /* Trip.xcdatamodeld in Sources */,
-				24842D271CB94E0A00FA784D /* UserIdentity.swift in Sources */,
 				2484A6361CBBC33500CD51F8 /* AppDelegateExtension.swift in Sources */,
+				24A80B4E1CBEAD900017266A /* BaseHttpRequest.swift in Sources */,
 				247758051CBC72F400251EC7 /* LBTabBarController.swift in Sources */,
 				2484A63F1CBBD92100CD51F8 /* LiveViewController.swift in Sources */,
 				24FB65081CB4F165006C93DA /* DropdownMenu.swift in Sources */,
