@@ -36,5 +36,19 @@ extension UIView {
     func getRightX() -> CGFloat {
         return self.frame.origin.x + self.frame.size.width;
     }
+
+}
+
+//扩充drawRect方法
+extension UIControl {
+    
+    override public func drawRect(rect: CGRect) {
+        let finalRect = CGRect(x: rect.origin.x, y: rect.origin.y, width: rect.size.width/2, height: rect.size.height/2);
+        super.drawRect(finalRect);
+    }
+    
+    override public func drawLayer(layer: CALayer, inContext ctx: CGContext) {
+        
+    }
     
 }

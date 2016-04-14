@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginView: UIView {
+class LoginView: UIControl {
     
     //手机号
     var mobile: String? {
