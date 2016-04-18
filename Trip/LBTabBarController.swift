@@ -126,7 +126,7 @@ extension LBTabBarController {
             }
         }
         
-        let liveShootButton = UIButton(frame: CGRect(x: tabBarView.frameWidth - 65 - 20, y: 0, width: 65, height: 65));
+        let liveShootButton = UIButton(frame: CGRect(x: tabBarView.frameWidth - 65 - 15, y: 0, width: 65, height: 65));
         liveShootButton.setImage(UIImage(named: "icon_shoot"), forState: UIControlState.Normal);
         tabBarView.addSubview(liveShootButton);
     }

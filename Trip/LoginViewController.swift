@@ -22,6 +22,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
+        let productCard = ProductCardView();
+        print("begin set frame");
+        productCard.frame = self.view.frame;
+        
         //添加页面元素的响应函数
         loginView.frame = self.view.bounds;
         self.loginView.loginButton.addTarget(self, action: #selector(LoginViewController.actionLogin(_: )), forControlEvents: UIControlEvents.TouchUpInside);
@@ -57,7 +61,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     func actionLogin(sender:UIButton) {
-        mobileZone = loginView.mobileZoneDropdownMenu.selectedValue;
+        mobileZone = loginView.mobileZoneButton.titleLabel?.text;
         mobile = loginView.mobileInput.text;
         if mobile == nil {
             

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 extension UIView {
     
@@ -39,16 +40,4 @@ extension UIView {
 
 }
 
-//扩充drawRect方法
-extension UIControl {
-    
-    override public func drawRect(rect: CGRect) {
-        let finalRect = CGRect(x: rect.origin.x, y: rect.origin.y, width: rect.size.width/2, height: rect.size.height/2);
-        super.drawRect(finalRect);
-    }
-    
-    override public func drawLayer(layer: CALayer, inContext ctx: CGContext) {
-        
-    }
-    
-}
+

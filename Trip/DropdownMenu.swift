@@ -14,6 +14,8 @@ struct MenuItem {
     let value: String;
 }
 
+protocol DropdownMenuDelegate {
+}
 
 class DropdownMenu: UIControl {
 
@@ -135,14 +137,8 @@ class DropdownMenu: UIControl {
         self.dropdownMenu.frame.size.width = originalFrame!.width;
     }
     
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+    //重写hitTest，在dropdownMenu显示的时候可以响应相关的点击事件
+    
 }
 
 

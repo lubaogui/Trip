@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import DeviceGuru
 
 class Application {
     
@@ -15,11 +16,9 @@ class Application {
     lazy var webRequest = BaseHttpRequest();
     lazy var toast = LBToast();
     
-    /*
     private init() {
     // Private initialization to ensure just one instance is created.
     }
-    */
     
     func getHomeController() -> NSString {
         
