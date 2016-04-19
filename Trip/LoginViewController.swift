@@ -22,10 +22,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        let productCard = ProductCardView();
-        print("begin set frame");
-        productCard.frame = self.view.frame;
-        
         //添加页面元素的响应函数
         loginView.frame = self.view.bounds;
         self.loginView.loginButton.addTarget(self, action: #selector(LoginViewController.actionLogin(_: )), forControlEvents: UIControlEvents.TouchUpInside);
@@ -36,6 +32,7 @@ class LoginViewController: UIViewController {
         
         self.loginView.mobileInput.delegate = self;
         self.loginView.passwordInput.delegate = self;
+        loginView.backgroundColor = UIColor.whiteColor();
 
         self.view.addSubview(self.loginView);
     }
@@ -70,7 +67,15 @@ extension LoginViewController {
         if password == nil {
             
         }
-                                
+        
+        //发送登录成功消息
+        NSNotificationCenter.defaultCenter().postNotificationName("LoginSucceededNotifycation", object: nil);
+        
+        if self.isRootViewController() == false {
+            
+            self.dismissViewControllerAnimated(true, completion: nil);
+        }
+        
     }
     
     func actionSignup(sender:UIButton) {
@@ -90,7 +95,9 @@ extension LoginViewController {
     }
     
     func actionClose(sender:UIButton) {
-        print(self.isRootViewController());
+        if self.isRootViewController() == false {
+            self.dismissViewControllerAnimated(true, completion: nil);
+        }
     }
     
 }

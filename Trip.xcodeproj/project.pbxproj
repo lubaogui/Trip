@@ -188,6 +188,14 @@
 			name = Dao;
 			sourceTree = "<group>";
 		};
+		243A144B1CC5D2E300A8E90C /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				245B60B41CBD4D3500D460F5 /* Cell */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
 		245B60B41CBD4D3500D460F5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +314,7 @@
 		248F1CB81CB17C3E00FC295C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				245B60B41CBD4D3500D460F5 /* Cell */,
+				243A144B1CC5D2E300A8E90C /* Activity */,
 				247BB46C1CB26F0A002E436A /* LoginView.swift */,
 			);
 			name = Views;

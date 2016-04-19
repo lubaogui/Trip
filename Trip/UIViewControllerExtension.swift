@@ -43,4 +43,19 @@ extension UIViewController {
         appDelegate?.referrenceVC = viewController;
     }
     
+    //获取本次操作的目标VC(页面)
+    var targetVC: UIViewController? {
+        return appDelegate?.targetVC;
+    }
+    
+    //设置目标targetVC
+    func setTargetVC(viewController: UIViewController) {
+        appDelegate?.targetVC = viewController;
+    }
+    
+    //需要登录的controller在此判断
+    func needLogin() -> Bool {
+        return true;
+    }
+    
 }

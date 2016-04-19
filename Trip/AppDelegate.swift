@@ -11,12 +11,13 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?;
     
     //根tabBarVC
     var tabBarVC: LBTabBarController?;
     var referrenceVC: UIViewController?;
+    var targetVC: UIViewController?;
     
     //用户流程在此程序中开始
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -162,7 +163,10 @@ extension AppDelegate {
     private func registerNotifications()  {
         let notificationCenter = NSNotificationCenter.defaultCenter();
         
+        //需要登录通知，该通知只在网络请求等一些情况下使用
         notificationCenter.addObserver(self, selector: #selector(AppDelegate.needLogin(_:)), name: "needLoginNotification", object: nil);
+        
+        //登录成功通知
         notificationCenter.addObserver(self, selector: #selector(AppDelegate.didLoginSucceeded(_:)), name: "LoginSucceededNotifycation", object: nil);
         notificationCenter.addObserver(self, selector: #selector(AppDelegate.didLogoutSucceeded(_:)), name: "LogoutSucceededNotifycation", object: nil);
         notificationCenter.addObserver(self, selector: #selector(AppDelegate.guideViewFinished(_:)), name: "guideViewFinished", object: nil);
@@ -171,9 +175,7 @@ extension AppDelegate {
     
     //当需要用户登录时调用登录界面，此方法需要记录用户登录之前的页面，在登录成功后需要跳转到原页面
     func needLogin(notification:NSNotification) {
-        self.window?.rootViewController?.presentViewController(LoginViewController(), animated: true, completion: {
-            print("login succeeded!");
-        })
+        
     }
     
     

@@ -25,6 +25,11 @@ class Application {
         return "IndexViewController";
     }
     
+    //获取登录VC
+    func getLoginVC() -> AnyClass {
+        return LoginViewController.self;
+    }
+    
     func setHomeController(controller: NSString) {
         
     }

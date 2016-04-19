@@ -10,12 +10,14 @@ import UIKit
 
 class MeViewController: UIViewController {
     
+    static internal var needLogin = true;
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         self.tabBarItem.title = "我";
-
+    
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.lightGrayColor();
+        self.view.backgroundColor = UIColor.greenColor();
 
     }
 

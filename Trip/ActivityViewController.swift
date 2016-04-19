@@ -1,5 +1,5 @@
 //
-//  ActivityViewController.swift
+//  ActivityViewController.swift nav的根控制器
 //  Trip
 //
 //  Created by Baogui Lu on 4/11/16.
@@ -9,10 +9,17 @@
 import UIKit
 
 class ActivityViewController: UIViewController {
+    
+    let tableView = UITableView();
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "抱抱";
+        self.title = "抱抱";
+        
+        tableView.frame = self.view.frame;
+        tableView.backgroundColor  = UIColor.orangeColor();
+        self.view.addSubview(tableView);
 
 
         // Do any additional setup after loading the view.
@@ -21,6 +28,12 @@ class ActivityViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    //tableViewUI初始化
+    func setupTableView() {
+        
     }
     
 
@@ -34,4 +47,48 @@ class ActivityViewController: UIViewController {
     }
     */
 
+}
+
+
+extension ActivityViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 5;
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+     
+        return UIView() as! UITableViewCell;
+    }
+    
+    
+    
+    
+    
+}
+
+
+//productCardView delegate
+extension ActivityViewController: ProductCardViewDelegate {
+    
+    func productImageClicked(productId: Int) {
+        
+    }
+    
+    func avatarButtonClicked(uid: Int) {
+        
+    }
+    
+    func likeButtonClicked(uid: Int, productId: Int) {
+        
+    }
+    
+    func bookingButtonClicked(productId: Int, uid: Int) {
+        
+    }
+    
+
+    
 }

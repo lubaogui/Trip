@@ -43,8 +43,10 @@ class LoginView: UIControl {
     let weiboLoginButton = UIButton();
     let wechatLoginButton = UIButton();
     
-    override func willMoveToSuperview(newSuperview: UIView?) {
-    
+    override init(frame: CGRect) {
+        
+        super.init(frame: frame);
+        
         //背景图像
         backgroundImageView.image = UIImage(named: "login_bg");
         backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFill;
@@ -52,6 +54,7 @@ class LoginView: UIControl {
         backgroundImageView.snp_makeConstraints { (make) in
             make.edges.equalTo(self).inset(UIEdgeInsetsMake(0, 0, 0, 0));
         }
+
         
         //关闭按钮
         closeButton.backgroundColor = UIColor.clearColor();
@@ -193,6 +196,10 @@ class LoginView: UIControl {
             make.centerY.equalTo(weiboLoginButton);
         }
         
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     /*

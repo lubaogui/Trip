@@ -13,6 +13,7 @@ public struct LBTabBarItem {
     let icon: String;
     let highlightIcon: String;
     let classType: UIViewController.Type;
+    let needLogin: Bool;
 }
 
 class LBTabBarController: UITabBarController {
@@ -24,7 +25,6 @@ class LBTabBarController: UITabBarController {
             
         }
     }
-
     
     //TabController的子controller，当navRootVCs被设置时，LBTabController自动初始化tabBars
     private var tabBarItems: Array <LBTabBarItem>? {
@@ -34,7 +34,7 @@ class LBTabBarController: UITabBarController {
                 let navVC = UINavigationController(rootViewController: vc.init());
                 navVC.tabBarItem.title = item.name;
                 self.addChildViewController(navVC);
-                navVC.navigationBar.hidden = true;
+                navVC.navigationBar.hidden = false;
             }
         }
     }
@@ -44,9 +44,9 @@ class LBTabBarController: UITabBarController {
 
         //设置tabBar的Items
         tabBarItems = [
-            LBTabBarItem(name: "活动", icon: "H_unSelect", highlightIcon: "H", classType: LoginViewController.self),
-            LBTabBarItem(name: "直播", icon: "U_unSelect", highlightIcon: "U", classType: LiveViewController.self),
-            LBTabBarItem(name: "我", icon: "G_unSelect", highlightIcon: "G", classType: MeViewController.self)
+            LBTabBarItem(name: "活动", icon: "H_unSelect", highlightIcon: "H", classType: ActivityViewController.self, needLogin: false),
+            LBTabBarItem(name: "直播", icon: "U_unSelect", highlightIcon: "U", classType: LiveViewController.self, needLogin: false),
+            LBTabBarItem(name: "我", icon: "G_unSelect", highlightIcon: "G", classType: MeViewController.self, needLogin: true)
         ];
         
         //初始化自定义界面
@@ -142,17 +142,29 @@ extension LBTabBarController {
 extension LBTabBarController {
     
     func buttonSelected(sender:UIButton) {
+        //当前选中按钮的tag
+        let currentSelectedButtonTag = self.selectedIndex + 100;
+        let senderIndex = sender.tag - 100;
         
-        let originalTag = self.selectedIndex + 100;
-
-        if (originalTag + 100 != sender.tag) {
+        //点击事件没有发生在目前已经选中的按钮上
+        if (currentSelectedButtonTag  != sender.tag) {
             
-            let preButton = self.tabBarView.viewWithTag(originalTag) as! UIButton;
-            preButton.selected = false;
-            sender.selected = true;
-            self.selectedIndex = sender.tag - 100;
+            let selectedVC = self.viewControllers![senderIndex];
+            
+            if  Application.sharedInstance.user.isGuest() && selectedVC.needLogin()  {
+                let loginVC = LoginViewController();
+                loginVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
+                self.presentViewController(loginVC, animated: true, completion: nil);
+            }
+            else {
+                let preButton = self.tabBarView.viewWithTag(currentSelectedButtonTag) as! UIButton;
+                preButton.selected = false;
+                sender.selected = true;
+                self.selectedIndex = senderIndex;
+            }
+            
         }
-
+        
     }
     
 }
