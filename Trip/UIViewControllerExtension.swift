@@ -53,9 +53,12 @@ extension UIViewController {
         appDelegate?.targetVC = viewController;
     }
     
+}
+
+
+extension UIViewController {
     //需要登录的controller在此判断
-    func needLogin() -> Bool {
+    func checkLogin() -> Bool {
         return true;
     }
-    
 }

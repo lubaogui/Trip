@@ -34,6 +34,7 @@
 		24A80B4E1CBEAD900017266A /* BaseHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A80B4D1CBEAD900017266A /* BaseHttpRequest.swift */; };
 		24A80B501CBEAD990017266A /* UserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A80B4F1CBEAD990017266A /* UserIdentity.swift */; };
 		24A80B521CBEADA00017266A /* LBToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A80B511CBEADA00017266A /* LBToast.swift */; };
+		24D5E59B1CC72E9E00096653 /* LBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D5E59A1CC72E9E00096653 /* LBBaseViewController.swift */; };
 		24FB65081CB4F165006C93DA /* DropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB65071CB4F165006C93DA /* DropdownMenu.swift */; };
 		24FB69E51CBCC9960046E97F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24FB69E41CBCC9960046E97F /* Launch Screen.storyboard */; };
 		24FB69E71CBCFFD60046E97F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB69E61CBCFFD60046E97F /* UIColorExtension.swift */; };
@@ -93,6 +94,7 @@
 		24A80B4D1CBEAD900017266A /* BaseHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHttpRequest.swift; sourceTree = "<group>"; };
 		24A80B4F1CBEAD990017266A /* UserIdentity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserIdentity.swift; sourceTree = "<group>"; };
 		24A80B511CBEADA00017266A /* LBToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBToast.swift; sourceTree = "<group>"; };
+		24D5E59A1CC72E9E00096653 /* LBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBBaseViewController.swift; sourceTree = "<group>"; };
 		24FB65071CB4F165006C93DA /* DropdownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenu.swift; sourceTree = "<group>"; };
 		24FB69E41CBCC9960046E97F /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		24FB69E61CBCFFD60046E97F /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				24A80B4F1CBEAD990017266A /* UserIdentity.swift */,
 				24A80B4D1CBEAD900017266A /* BaseHttpRequest.swift */,
 				247758041CBC72F400251EC7 /* LBTabBarController.swift */,
+				24D5E59A1CC72E9E00096653 /* LBBaseViewController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				24A80B4C1CBEAD880017266A /* Application.swift in Sources */,
 				2484A6321CBB788000CD51F8 /* SignupViewController.swift in Sources */,
 				248027F81CB8E5E300354AD6 /* GuideViewController.swift in Sources */,
+				24D5E59B1CC72E9E00096653 /* LBBaseViewController.swift in Sources */,
 				247BB46D1CB26F0A002E436A /* LoginView.swift in Sources */,
 				24A3272F1CC5105D00056687 /* Product.swift in Sources */,
 				2486EB6E1C98025F00EA22B6 /* Trip.xcdatamodeld in Sources */,

@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ActivityViewController: UIViewController {
+class ActivityViewController: LBBaseViewController {
+    
+    
     
     let tableView = UITableView();
 

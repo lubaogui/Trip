@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: LBBaseViewController {
     
     //UI变量
     var mobileZone: String?;

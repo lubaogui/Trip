@@ -8,9 +8,11 @@
 
 import UIKit
 
-class MeViewController: UIViewController {
+class MeViewController: LBBaseViewController {
     
-    static internal var needLogin = true;
+    override func needUserLogin() -> Bool {
+        return true;
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -36,5 +38,5 @@ class MeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

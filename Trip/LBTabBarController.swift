@@ -149,9 +149,13 @@ extension LBTabBarController {
         //点击事件没有发生在目前已经选中的按钮上
         if (currentSelectedButtonTag  != sender.tag) {
             
-            let selectedVC = self.viewControllers![senderIndex];
+            let selectedVC = self.viewControllers![senderIndex].childViewControllers[0] as! LBBaseViewController;
             
-            if  Application.sharedInstance.user.isGuest() && selectedVC.needLogin()  {
+            //print(selectedVC.dynamicType);
+            
+            if  Application.sharedInstance.user.isGuest() && selectedVC.needUserLogin()  {
+            //if  Application.sharedInstance.user.isGuest() {
+
                 let loginVC = LoginViewController();
                 loginVC.modalTransitionStyle = UIModalTransitionStyle.CoverVertical;
                 self.presentViewController(loginVC, animated: true, completion: nil);

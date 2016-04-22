@@ -1,21 +1,25 @@
 //
-//  LiveViewController.swift
+//  LBBaseViewController.swift
 //  Trip
 //
-//  Created by Baogui Lu on 4/11/16.
+//  Created by Baogui Lu on 4/20/16.
 //  Copyright © 2016 Baogui Lu. All rights reserved.
 //
 
 import UIKit
 
-class LiveViewController: LBBaseViewController {
+
+
+class LBBaseViewController: UIViewController {
+    
+    func needUserLogin() -> Bool {
+        return false;
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.lightGrayColor();
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,5 +37,8 @@ class LiveViewController: LBBaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
+
+
