@@ -6,6 +6,7 @@ use_frameworks!
 
 def pods
     pod 'Alamofire'
+    pod 'AlamofireObjectMapper', '~> 3.0'
     pod 'DeviceGuru'
     pod 'Kingfisher'
     pod 'DynamicColor', '~> 2.4.0'
