@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire;
 
 class LoginViewController: LBBaseViewController {
     
@@ -35,6 +36,7 @@ class LoginViewController: LBBaseViewController {
         loginView.backgroundColor = UIColor.whiteColor();
 
         self.view.addSubview(self.loginView);
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,15 +60,39 @@ class LoginViewController: LBBaseViewController {
 extension LoginViewController {
     
     func actionLogin(sender:UIButton) {
+        
+        print("login button pressed!");
+
         mobileZone = loginView.mobileZoneButton.titleLabel?.text;
         mobile = loginView.mobileInput.text;
         if mobile == nil {
-            
+            //提示用户手机号输入不能为空
+            mobile = "18301579720";
         }
         password = loginView.passwordInput.text;
         if password == nil {
-            
+            //提示用户密码不能为空
+            password = "1234567890";
         }
+        
+        
+        let params = [
+            "mobile_zone" : (mobileZone as! AnyObject),
+            "mobile" : (mobile as! AnyObject),
+            "password" : (password  as! AnyObject)
+        ];
+        
+        func processData(data:AnyObject?) -> Void {
+            print("处理用户定义函数");
+            print("用户登录成功");
+            print(data);
+        }
+        
+        func failureData(error:NSError?) -> Void {
+            print(error);
+        }
+        
+        Application.sharedInstance.webRequest.post("http://travel.lubanr.com/passport/ajax-login", parameters: params, encoding: .URL, successHandler: processData, failureHandler: failureData);
         
         //发送登录成功消息
         NSNotificationCenter.defaultCenter().postNotificationName("LoginSucceededNotifycation", object: nil);

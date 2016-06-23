@@ -8,6 +8,13 @@
 
 import Foundation
 import Alamofire
+import Gloss
+
+
+//define callback function
+typealias SuccessCallbackHandler = (data: AnyObject?) -> Void;
+typealias FailureCallbackHandler = (error: NSError?) -> Void;
+
 
 
 enum ParamEncoding {
@@ -16,31 +23,39 @@ enum ParamEncoding {
 }
 
 
-//general response struct
-public struct ResponseObject {
-    public var code:Int;
-    public var message:String;
-    public var _meta:AnyObject?;
-    public var data:AnyObject?;
-    
-    init (data:AnyObject) {
-        self.code = data.valueForKeyPath("code") as! Int;
-        self.message = data.valueForKeyPath("message") as! String;
-        self._meta = data.valueForKeyPath("_meta");
-        self.data = data.valueForKeyPath("data");
-    }
-}
-
-
 //baseHttpRequest需要封装返回参数的解析
 class BaseHttpRequest: NSObject {
-    private var headers: Array<String> = [];
-    var responseObject: ResponseObject?;
+    private var headers: [String:String]? ;
+    
     
     //提交post请求
-    func post(URLString: String, parameters: [String: AnyObject]? = nil, encoding: ParamEncoding = .URL, headers: [String: String]? = nil, successHandler:((data:ResponseObject?) -> Void), failureHandler:((error:NSError?)->Void)) -> Void {
+    func post(URLString: String, parameters: [String: AnyObject]? = nil, encoding: ParameterEncoding = .URL,  successHandler:SuccessCallbackHandler, failureHandler:FailureCallbackHandler) -> Void {
+
+        request(.POST, URLString, parameters: parameters, encoding: encoding, headers: self.headers)
+            .responseJSON { (response) in
+                
+                let responseData = response.result.value;
+                print(responseData.dynamicType);
+                
+                guard let code = responseData!["code"] else {
+                    print("code can not be extracted from result");
+                    return;
+                }
+                
+                if (code as! Int == 0) {
+                    print("请求正常");
+                }
+                else {
+                    let message = responseData!["message"];
+                    print("应用处理错误，错误信息为: \(message)");
+                }
+                
+                successHandler(data: responseData);
+                
+                print("return result is:");
+        }
         
     }
     
-        
+    
 }
